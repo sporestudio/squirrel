@@ -1,0 +1,28 @@
+services:
+  nginx:
+    image: nginx:alpine
+    container_name: nginx
+    ports:
+      - "8080:80"
+    restart: unless-stopped
+
+  php:
+    build:
+      context: ./php
+      dockerfile: Dockerfile
+    container_name: php
+    ports:
+      - "9000:9000"
+    working_dir: /var/www/html
+
+
+  mail:
+    build:
+      context: ./mail
+      dockerfile: Dockerfile
+    container_name: mail
+    ports:
+      - "25:25"
+      - "143:143"
+      - "587:587"
+      - "993:993"
