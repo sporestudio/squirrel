@@ -13,7 +13,7 @@ RUN apt update && apt install -y \
     wget
 
 
-RUN echo "postfix postfix/mailname string pumukydev.test" | debconf-set-selections
+RUN echo "postfix postfix/mailname string spore.test" | debconf-set-selections
 RUN echo "postfix postfix/main_mailer_type string 'localhost'" | debconf-set-selections
 
 RUN apt-get install postfix -y
