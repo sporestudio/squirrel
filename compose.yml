@@ -4,6 +4,7 @@ services:
     container_name: nginx
     volumes:
       - ./nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
+      - ./squirrel/:/var/www/html
     ports:
       - "8080:80"
     restart: unless-stopped
@@ -13,10 +14,11 @@ services:
       context: ./php
       dockerfile: Dockerfile
     container_name: php
+    volumes:
+      - ./squirrel/:/var/www/html
     ports:
       - "9000:9000"
     working_dir: /var/www/html
-
 
   mail:
     build:
