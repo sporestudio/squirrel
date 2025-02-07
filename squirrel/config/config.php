@@ -21,23 +21,23 @@ $provider_uri     = 'http://squirrelmail.org/';
 
 $provider_name     = 'SquirrelMail';
 
-$motd = "Hello!, welcome to spore.test mail server  ";
+$motd = "Hello!, welcome to spore.test mail server";
 
 $squirrelmail_default_language = 'es_ES';
 $default_charset       = 'iso-8859-1';
 $lossy_encoding        = false;
 
 $domain                 = 'spore.test';
-$imapServerAddress      = 'localhost';
+$imapServerAddress      = 'mail';
 $imapPort               = 143;
 $useSendmail            = false;
-$smtpServerAddress      = 'localhost';
+$smtpServerAddress      = 'mail';
 $smtpPort               = 25;
 $sendmail_path          = '/usr/sbin/sendmail';
 $sendmail_args          = '-i -t';
 $pop_before_smtp        = false;
 $pop_before_smtp_host   = '';
-$imap_server_type       = 'other';
+$imap_server_type       = 'dovecot';
 $invert_time            = false;
 $optional_delimiter     = 'detect';
 $encode_header_key      = '';
