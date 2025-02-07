@@ -16,17 +16,18 @@ services:
     container_name: php
     volumes:
       - ./squirrel/:/var/www/html
-    ports:
-      - "9000:9000"
     working_dir: /var/www/html
 
-  mail:
+  postfix:
     build:
-      context: ./mail
+      context: ./postfix
       dockerfile: Dockerfile
-    container_name: mail
-    ports:
-      - "25:25"
-      - "143:143"
-      - "587:587"
-      - "993:993"
+    container_name: postfix
+
+  dovecot:
+    build:
+      context: ./dovecot
+      dockerfile: Dockerfile
+    container_name: dovecot
+    depends_on:
+      - postfix
