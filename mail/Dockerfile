@@ -42,7 +42,3 @@ EXPOSE 25 143 587 993
 
 # Create entrypoint
 COPY entrypoint.sh /entrypoint.sh
-
-RUN chmod +x /entrypoint.sh
-
-ENTRYPOINT [ "/entrypoint.sh" ]
