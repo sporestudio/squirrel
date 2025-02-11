@@ -16,18 +16,30 @@ services:
     container_name: php
     volumes:
       - ./squirrel/:/var/www/html
-    working_dir: /var/www/html
+      - squirrelmail_data:/var/local/squirrelmail/data
+      - squirrelmail_attach:/var/local/squirrelmail/attach
 
   postfix:
     build:
       context: ./postfix
       dockerfile: Dockerfile
     container_name: postfix
+    hostname: mail.aula.izv
+    volumes:
+      - maildata:/home
 
   dovecot:
     build:
       context: ./dovecot
       dockerfile: Dockerfile
     container_name: dovecot
+    hostname: mail.aula.izv
+    volumes:
+      - maildata:/home
     depends_on:
       - postfix
+
+volumes:
+  maildata:
+  squirrelmail_data:
+  squirrelmail_attach:
