@@ -43,9 +43,9 @@ $optional_delimiter     = 'detect';
 $encode_header_key      = '';
 
 $default_folder_prefix          = '';
-$trash_folder                   = ".Trash";    
-$sent_folder                    = ".Sent";      
-$draft_folder                   = ".Drafts";   
+$trash_folder                   = "Trash";    
+$sent_folder                    = "Sent";      
+$draft_folder                   = "Drafts";   
 $default_move_to_trash          = true;
 $default_move_to_sent           = true;
 $default_save_as_draft          = true;
