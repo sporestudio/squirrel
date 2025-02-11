@@ -27,11 +27,11 @@ $squirrelmail_default_language = 'es_ES';
 $default_charset       = 'iso-8859-1';
 $lossy_encoding        = false;
 
-$domain                 = 'spore.test';
-$imapServerAddress      = 'mail';
+$domain                 = 'aula.izv';
+$imapServerAddress      = 'dovecot';
 $imapPort               = 143;
 $useSendmail            = false;
-$smtpServerAddress      = 'mail';
+$smtpServerAddress      = 'postfix';
 $smtpPort               = 25;
 $sendmail_path          = '/usr/sbin/sendmail';
 $sendmail_args          = '-i -t';
@@ -43,9 +43,9 @@ $optional_delimiter     = 'detect';
 $encode_header_key      = '';
 
 $default_folder_prefix          = '';
-$trash_folder                   = 'INBOX.Trash';
-$sent_folder                    = 'INBOX.Sent';
-$draft_folder                   = 'INBOX.Drafts';
+$trash_folder                   = ".Trash";    
+$sent_folder                    = ".Sent";      
+$draft_folder                   = ".Drafts";   
 $default_move_to_trash          = true;
 $default_move_to_sent           = true;
 $default_save_as_draft          = true;
