@@ -16,8 +16,6 @@ services:
     container_name: php
     volumes:
       - ./squirrel/:/var/www/html
-      - squirrelmail_data:/var/local/squirrelmail/data
-      - squirrelmail_attach:/var/local/squirrelmail/attach
 
   postfix:
     build:
@@ -41,5 +39,3 @@ services:
 
 volumes:
   maildata:
-  squirrelmail_data:
-  squirrelmail_attach:
